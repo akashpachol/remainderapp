@@ -1,0 +1,36 @@
+
+<div class="img " [style.background-image]="'url(/assets/login1.jpg' + ')'">
+<button class=" btn btn-primary m-5 " (click)="logout()" style="float: right;">logout</button>
+
+   
+       <div class="row  py-5 ">
+           <div class="col-md-4 "></div>
+           <div class="col-md-4 py-5 my-5 ">
+             <form [formGroup]="addEventform">
+            <div class="card text-center  ">
+                <div class="card-header">
+                  <input type="date" formControlName="date">
+                </div>
+                <div class="card-body">
+                 
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="add comment" formControlName="events" id="floatingTextarea2" style="height: 100px"></textarea>
+                       
+                      </div>
+                  
+                </div>
+                <div class="card-footer text-muted d-flex justify-content-around">
+                  <button class="btn btn-primary" routerLink="/history">view event</button>
+                  <button (click)="addEvent()" class="btn btn-success">add event</button>
+                </div>
+              </div>
+            </form>
+           </div>
+           <div class="col-md-4 "></div>
+       </div>
+    
+
+          
+           
+    
+</div>

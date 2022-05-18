@@ -1,0 +1,36 @@
+<div class="img " [style.background-image]="'url(/assets/login1.jpg' + ')'">
+
+    <h1 style="color:white" class="text-center">WELCOME TO {{uname}}</h1>
+    <table class="table w-75">
+        <thead >
+            <tr >
+                <th >date</th>
+                <th >uid</th>
+                <th>events</th>
+            </tr>
+        </thead>
+            <tbody>
+    
+               <tr *ngFor="let t of history" >
+                    <th>{{t.date}}</th>
+                    <th>{{uid}}</th>
+                    <th>{{t.events}}</th>
+               </tr>
+              
+            </tbody>
+       
+        
+    </table>
+    <div class="  hai">
+       <button class="bn btn-success btn-lg m-5"><a  routerLink="/home" style="color:white ;" >home</a></button>
+        <button (click)="onDelete()" class="bn btn-danger btn-lg m-5"><a style="color:white ;">delete</a></button>
+    </div>
+ 
+    
+   
+   
+       
+        
+ 
+</div>
+
